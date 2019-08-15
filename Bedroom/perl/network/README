@@ -1,0 +1,5 @@
+NOTES:
+adhoc utilities to see how they work
+
+sniff.pl - simple way to read network packets. nothing fancy. (uses: https://metacpan.org/pod/distribution/Net-Pcap-Easy/Easy.pod)
+1. brew install libpcap (in case you are missing the library - https://brewformulas.org/Libpcap )
