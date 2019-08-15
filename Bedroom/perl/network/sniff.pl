@@ -12,7 +12,7 @@ my ($dev, $filter, $promiscuous);
 GetOptions (
             "dev=s"      	=> \$dev,
             "filter=s"   	=> \$filter,
-            "promiscuous=s" => \$promiscuous,
+            "promiscuous=s" => \$promiscuous || 0,
 );
 
 # all arguments to new are optoinal
@@ -23,7 +23,7 @@ my $npe = Net::Pcap::Easy->new(
     filter           => $filter,
     packets_per_loop => 10,
     bytes_to_capture => 1024,
-    promiscuous      => 0, # true or false
+    promiscuous      => $promiscuous, # true or false
  
  	# outputs tcp  
     tcp_callback => sub {
